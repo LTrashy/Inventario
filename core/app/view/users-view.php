@@ -4,20 +4,7 @@
 	<a href="index.php?view=newuser" class="btn btn-secondary "><i class='bi bi-user'></i> Nuevo Usuario</a>
 	<br><br>
 		<?php
-		/*
-		$u = new UserData();
-		print_r($u);
-		$u->name = "Agustin";
-		$u->lastname = "Ramos";
-		$u->email = "evilnapsis@gmail.com";
-		$u->password = sha1(md5("l00lapal00za"));
-		$u->add();
-
-
-		$f = $u->createForm();
-		print_r($f);
-		echo $f->label("name")." ".$f->render("name");
-		*/
+		
 		?>
 <div class="card">
 	<div class="card-header">USUARIOS

@@ -12,6 +12,7 @@ class OperationData {
 	}
 
 	public function add(){
+		$this->created_at = date('Y-m-d H:i:s');
 		$sql = "insert into ".self::$tablename." (product_id,q,operation_type_id,sell_id,created_at) ";
 		$sql .= "value (\"$this->product_id\",\"$this->q\",\"$this->operation_type_id\",\"$this->sell_id\",\"$this->created_at\")";
 		return Executor::doit($sql);

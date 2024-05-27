@@ -17,7 +17,7 @@
 
 namespace PhpOffice\PhpWord\Style;
 
-use PhpOffice\PhpWord\Shared\String;
+use PhpOffice\PhpWord\Shared\StringHelper;
 
 /**
  * Abstract style class

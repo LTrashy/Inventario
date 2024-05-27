@@ -9,12 +9,14 @@ class ProductData {
 		$this->unit = "";
 		$this->user_id = "";
 		$this->presentation = "0";
-		$this->created_at = "NOW()";
+		$this->created_at = date('Y-m-d H:i:s');
 	}
 
 	public function getCategory(){ return CategoryData::getById($this->category_id);}
 
 	public function add(){
+		$this->created_at = date('Y-m-d H:i:s');
+		var_dump($this->created_at);
 		$sql = "insert into ".self::$tablename." (barcode,name,description,price_in,price_out,user_id,presentation,unit,category_id,inventary_min,created_at) ";
 		$sql .= "value (\"$this->barcode\",\"$this->name\",\"$this->description\",\"$this->price_in\",\"$this->price_out\",$this->user_id,\"$this->presentation\",\"$this->unit\",\"$this->category_id\",\"$this->inventary_min\",\"$this->created_at\")";
 		return Executor::doit($sql);

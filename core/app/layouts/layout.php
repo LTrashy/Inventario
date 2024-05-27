@@ -44,6 +44,10 @@
     <link rel="stylesheet" type="text/css" href="assets/bootstrap-icons/bootstrap-icons.css">
     <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
     <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
   </head>
   <body>
 <?php if(!isset($_SESSION["user_id"])):?>
@@ -54,7 +58,7 @@
 <div class="card-group d-block d-md-flex row">
 <div class="card col-md-12 p-4 mb-0">
 <div class="card-body">
-<h1>INVENTIO <b>LITE</b></h1>
+<h1>DONAIRE <b>INV</b></h1>
 <br>
 <p class="text-medium-emphasis">Iniciar Sesion al Sistema</p>
 <form method="post" action="./?action=processlogin">
@@ -97,7 +101,7 @@
 <div class="sidebar-brand d-none d-md-flex">
 <div class="sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
 
-<h4><a href="./" style="color: white;">INVENTIO<b>LITE</b></a></h4>
+<h4><a href="./" style="color: white;"><b>DONAIRE</b></a></h4>
 
 </div>
 <div class="sidebar-brand-narrow" width="46" height="46" alt="CoreUI Logo">
@@ -256,11 +260,15 @@
         </div>
       </div>
       <footer class="footer">
-        <div><a href="https://evilnapsis.com/">Evilnapsis </a> © 2023.</div>
-        <div class="ms-auto">Version <b>4.1</b></div> 
+        <div><a href="https://github.com/LTrashy/Inventario">Repositorio DEV </a> © 2024.</div>
+        <div class="ms-auto">Version <b>1.0</b></div> 
       </footer>
     </div>
     <?php endif; ?>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- CoreUI and necessary plugins-->
     <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
     <script src="vendors/simplebar/js/simplebar.min.js"></script>
