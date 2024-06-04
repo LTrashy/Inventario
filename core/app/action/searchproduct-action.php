@@ -32,7 +32,7 @@ $q= OperationData::getQYesF($product->id);
 	if($q>0):?>
 		
 	<tr class="<?php if($q<=$product->inventary_min){ echo "danger"; }?>">
-		<td style="width:80px;"><?php echo $product->id; ?></td>
+		<td style="width:80px;"><?php echo $product->barcode; ?></td>
 		<td><?php echo $product->name; ?></td>
 		<td><?php echo $product->unit; ?></td>
 		<td><b>$<?php echo $product->price_out; ?></b></td>
@@ -58,7 +58,7 @@ $q= OperationData::getQYesF($product->id);
 <?php  endif; ?>
 	<?php endforeach;?>
 </table>
-<?php if($products_in_cero>0){ echo "<p class='alert alert-warning'>Se omitieron <b>$products_in_cero productos</b> que no tienen existencias en el inventario. <a href='index.php?module=inventary'>Ir al Inventario</a></p>"; }?>
+<?php if($products_in_cero>0){ echo "<p class='alert alert-warning'>Se omitieron <b>$products_in_cero productos</b> que no tienen existencias en el inventario. <a href='?view=inventary'>Ir al Inventario</a></p>"; }?>
 
 	<?php
 }else{

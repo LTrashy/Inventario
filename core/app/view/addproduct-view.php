@@ -42,14 +42,18 @@ if(count($_POST)>0){
 
 
 
-if($_POST["q"]!="" || $_POST["q"]!="0"){
+if(isset($_POST["q"]) && $_POST["q"] != "" && $_POST["q"] != "0"){
+  
  $op = new OperationData();
  $op->product_id = $prod[1] ;
  $op->operation_type_id=OperationTypeData::getByName("entrada")->id;
  $op->q= $_POST["q"];
  $op->sell_id="NULL";
 $op->is_oficial=1;
+// var_dump($op);
+// die();
 $op->add();
+
 }
 
 print "<script>window.location='index.php?view=products';</script>";

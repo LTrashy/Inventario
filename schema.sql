@@ -119,7 +119,7 @@ create table operation (
     product_id int,
     q float,
     operation_type_id int,
-    sell_id int,
+    sell_id int NULL,
     created_at datetime,
     foreign key (product_id) references product (id),
     foreign key (operation_type_id) references operation_type (id),

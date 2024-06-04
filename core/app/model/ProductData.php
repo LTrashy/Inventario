@@ -16,7 +16,7 @@ class ProductData {
 
 	public function add(){
 		$this->created_at = date('Y-m-d H:i:s');
-		var_dump($this->created_at);
+		// var_dump($this->created_at);
 		$sql = "insert into ".self::$tablename." (barcode,name,description,price_in,price_out,user_id,presentation,unit,category_id,inventary_min,created_at) ";
 		$sql .= "value (\"$this->barcode\",\"$this->name\",\"$this->description\",\"$this->price_in\",\"$this->price_out\",$this->user_id,\"$this->presentation\",\"$this->unit\",\"$this->category_id\",\"$this->inventary_min\",\"$this->created_at\")";
 		return Executor::doit($sql);
@@ -76,7 +76,7 @@ class ProductData {
 		return Model::many($query[0],new ProductData());
 	}
 
-
+// TODO : cambiar la busqueda sin relacionar el id 
 	public static function getLike($p){
 		$sql = "select * from ".self::$tablename." where barcode like '%$p%' or name like '%$p%' or id like '%$p%'";
 		$query = Executor::doit($sql);
