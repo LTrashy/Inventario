@@ -3,32 +3,44 @@ class SellData {
 	public static $tablename = "sell";
 
 	public function SellData(){
-		$this->created_at = "NOW()";
+		$this->created_at = "date('Y-m-d H:i:s')";
 	}
 
 	public function getPerson(){ return PersonData::getById($this->person_id);}
 	public function getUser(){ return UserData::getById($this->user_id);}
 
 	public function add(){
+		$this->created_at = date('Y-m-d H:i:s');
+		// var_dump($this->created_at);
+		// die();
 		$sql = "insert into ".self::$tablename." (total,discount,user_id,created_at) ";
-		$sql .= "value ($this->total,$this->discount,$this->user_id,$this->created_at)";
+		$sql .= "value ($this->total,$this->discount,$this->user_id,\"$this->created_at\")";
 		return Executor::doit($sql);
 	}
 
 	public function add_re(){
+		$this->created_at = date('Y-m-d H:i:s');
+		// var_dump($this->created_at);
+		// die();
 		$sql = "insert into ".self::$tablename." (user_id,operation_type_id,created_at) ";
-		$sql .= "value ($this->user_id,1,$this->created_at)";
+		$sql .= "value ($this->user_id,1,\"$this->created_at\")";
 		return Executor::doit($sql);
 	}
 
 
 	public function add_with_client(){
+		$this->created_at = date('Y-m-d H:i:s');
+		// var_dump($this->created_at);
+		// die();
 		$sql = "insert into ".self::$tablename." (total,discount,person_id,user_id,created_at) ";
 		$sql .= "value ($this->total,$this->discount,$this->person_id,$this->user_id,\"$this->created_at\")";
 		return Executor::doit($sql);
 	}
 
 	public function add_re_with_client(){
+		$this->created_at = date('Y-m-d H:i:s');
+		// var_dump($this->created_at);
+		// die();
 		$sql = "insert into ".self::$tablename." (person_id,operation_type_id,user_id,created_at) ";
 		$sql .= "value ($this->person_id,1,$this->user_id,\"$this->created_at\")";
 		return Executor::doit($sql);

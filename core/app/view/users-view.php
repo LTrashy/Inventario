@@ -36,12 +36,12 @@
 				<td><?php echo $user->email; ?></td>
 				<td>
 					<?php if($user->is_active):?>
-						<i class="glyphicon glyphicon-ok"></i>
+						<i class="glyphicon glyphicon-ok"></i>i
 					<?php endif; ?>
 				</td>
 				<td>
 					<?php if($user->is_admin):?>
-						<i class="glyphicon glyphicon-ok"></i>
+						<i class="glyphicon glyphicon-ok"></i>i
 					<?php endif; ?>
 				</td>
 				<td style="width:30px;"><a href="index.php?view=edituser&id=<?php echo $user->id;?>" class="btn btn-warning btn-xs">Editar</a></td>
